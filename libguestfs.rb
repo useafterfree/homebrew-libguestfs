@@ -206,7 +206,7 @@ class Libguestfs < Formula
     end
 
     ENV["REALLY_INSTALL"] = "yes"
-    system "sudo", "make", "install"
+    system "make", "install"
 
     if build.with? "go"
       # Fix maked go files permission
