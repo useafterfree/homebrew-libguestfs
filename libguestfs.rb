@@ -2,14 +2,14 @@ class Libguestfs < Formula
   homepage "http://libguestfs.org/"
 
   stable do
-    url "http://libguestfs.org/download/1.28-stable/libguestfs-1.30.1.tar.gz"
-    sha256 "bcdea7c9acf0fca87559dccd37ab6f2e523215be79c899f5c6c413e80d46cc06"
+    url "http://archive.libguestfs.org/1.30-stable/libguestfs-1.30.6.tar.gz"
+    sha256 "47681098a86f2a16ce09ef16866c5381b39b8a379b7686351514a593ecde4cd7"
 
-    patch do
-      # Change program_name to avoid collision with gnulib
-      url "https://gist.github.com/zchee/2845dac68b8d71b6c1f5/raw/ade1096e057711ab50cf0310ceb9a19e176577d2/libguestfs-gnulib.patch"
-      sha256 "b88e85895494d29e3a0f56ef23a90673660b61cc6fdf64ae7e5fecf79546fdd0"
-    end
+    # patch do
+    #   # Change program_name to avoid collision with gnulib
+    #   url "https://gist.github.com/zchee/2845dac68b8d71b6c1f5/raw/ade1096e057711ab50cf0310ceb9a19e176577d2/libguestfs-gnulib.patch"
+    #   sha256 "b88e85895494d29e3a0f56ef23a90673660b61cc6fdf64ae7e5fecf79546fdd0"
+    # end
     # patch do
     #   # Change program_name to avoid collision with gnulib
     #   url "https://gist.githubusercontent.com/shulima/a0ad4c21b9287a034a4c/raw/656caed670d811692ef8a255fcff94ccc19620d9/program-name.patch"
@@ -71,7 +71,7 @@ class Libguestfs < Formula
     url "http://libguestfs.org/download/1.31-development/libguestfs-1.31.7.tar.gz"
     sha256 "62318ac89baef0dcd3f5bd27996435fd3449878c7e490d3566a4fd40777fa092"
 
-    patch do 
+    patch do
       # Change program_name to avoid collision with gnulib
       url "https://gist.github.com/zchee/2845dac68b8d71b6c1f5/raw/ade1096e057711ab50cf0310ceb9a19e176577d2/libguestfs-gnulib.patch"
       sha256 "b88e85895494d29e3a0f56ef23a90673660b61cc6fdf64ae7e5fecf79546fdd0"
@@ -251,5 +251,3 @@ class Libguestfs < Formula
     system "#{bin}/libguestfs-test-tool", "-t 180"
   end
 end
-
-
